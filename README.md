@@ -1,3 +1,22 @@
+Fork and Partial Rewrite
+========================
+This is my attemp to fork and partially rewrite the cis-puppet module into a format that I think would be easier to consume and maintain.
+
+I have the following plans for the re-organization of this module:
+
+- Separate out manifest into sections that correspond to the CIS Benchmark Theme
+- Have a settings.pp type manifest where you can turn benchmark items on or off (maybe just in init.pp)
+- Have classes with subclasses for each section (e.g. cis-puppet:filesystem:cramfs)
+- Augeaus all config file operations so as to be compatible with existing Puppet infrastructure
+- Move facts from disparate shell scripts into a Ruby file (facts as Ruby code)
+- Choice of Level 1 or Level 2 enforcement
+- Give facts names you can use to check your compliance ( e.g. cis_tmp_ownfilesystem: true )
+
+The initial version of this module was a great start and a LOT of work.  My hope is to make some improvements upon it to make it even more useful.
+
+-Dave
+
+
 Overview
 ========
  
